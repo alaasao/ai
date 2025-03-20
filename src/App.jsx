@@ -36,9 +36,16 @@ function App() {
     84: 16,
   };
   const solution = [73, 76, 52, 53, 17, 18, 19, 31, 33, 57, 60, 12];
-  const visitedDfs = [73, 76, 52, 53, 17, 18, 19, 31, 33, 57, 60, 12];
+  const visitedDfs = ["A",1,2,3,4,10,11,12,13,14,15,17,18,20,21,"B"]
 
-  const realVisitedDfsNodes = visitedDfs;
+  const realVisitedDfsNodes = visitedDfs
+  .map((node) => {
+    const realNode = Object.keys(realNodes).find(
+      (key) => realNodes[key] === node
+    );
+    return realNode ? parseInt(realNode) : null;
+  })
+  .filter((node) => node !== null);;
   const visitedBfs = [
     "A",
     1,
