@@ -120,7 +120,10 @@ function App() {
           </div>
           <div
             className="bg-red-500  w-[100px] flex justify-center items-center rounded-lg p-3 cursor-pointer"
-            onClick={() => setBfs(false)}
+            onClick={() => {
+              setBfs(false)
+              setSolBfs(false)
+            }}
           >
             clear{" "}
           </div>
@@ -199,7 +202,9 @@ function App() {
           </div>
           <div
             className="bg-red-500  w-[100px] flex justify-center items-center rounded-lg p-3 cursor-pointer"
-            onClick={() => setDfs(false)}
+            onClick={() => {setDfs(false)
+              setSolDfs(false)
+            }}
           >
             clear{" "}
           </div>
@@ -278,7 +283,9 @@ function App() {
           </div>
           <div
             className="bg-red-500  w-[100px] flex justify-center items-center rounded-lg p-3 cursor-pointer"
-            onClick={() => setAs(false)}
+            onClick={() => {setAs(false)
+              setSolAs(false)
+            }}
           >
             clear{" "}
           </div>
